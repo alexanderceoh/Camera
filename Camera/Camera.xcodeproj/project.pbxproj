@@ -63,8 +63,6 @@
 				141088981BD526A800D41A3F /* ViewController.h */,
 				141088991BD526A800D41A3F /* ViewController.m */,
 				1410889B1BD526A800D41A3F /* Main.storyboard */,
-				1410889E1BD526A900D41A3F /* Assets.xcassets */,
-				141088A01BD526A900D41A3F /* LaunchScreen.storyboard */,
 				141088A31BD526A900D41A3F /* Info.plist */,
 				141088921BD526A800D41A3F /* Supporting Files */,
 			);
@@ -74,6 +72,8 @@
 		141088921BD526A800D41A3F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				141088A01BD526A900D41A3F /* LaunchScreen.storyboard */,
+				1410889E1BD526A900D41A3F /* Assets.xcassets */,
 				141088931BD526A800D41A3F /* main.m */,
 			);
 			name = "Supporting Files";
@@ -110,6 +110,7 @@
 				TargetAttributes = {
 					1410888E1BD526A800D41A3F = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 8KYAJ2C32M;
 					};
 				};
 			};
@@ -261,10 +262,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Camera/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = alexoh.Camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -272,10 +276,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Camera/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = alexoh.Camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
