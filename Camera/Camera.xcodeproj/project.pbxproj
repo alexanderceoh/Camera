@@ -13,6 +13,8 @@
 		1410889D1BD526A800D41A3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1410889B1BD526A800D41A3F /* Main.storyboard */; };
 		1410889F1BD526A900D41A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1410889E1BD526A900D41A3F /* Assets.xcassets */; };
 		141088A21BD526A900D41A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141088A01BD526A900D41A3F /* LaunchScreen.storyboard */; };
+		141088AA1BD56C2400D41A3F /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141088A91BD56C2400D41A3F /* Create.storyboard */; settings = {ASSET_TAGS = (); }; };
+		141088AC1BD56C3000D41A3F /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141088AB1BD56C3000D41A3F /* User.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		1410889E1BD526A900D41A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		141088A11BD526A900D41A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		141088A31BD526A900D41A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		141088A91BD56C2400D41A3F /* Create.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
+		141088AB1BD56C3000D41A3F /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +67,8 @@
 				141088981BD526A800D41A3F /* ViewController.h */,
 				141088991BD526A800D41A3F /* ViewController.m */,
 				1410889B1BD526A800D41A3F /* Main.storyboard */,
-				141088A31BD526A900D41A3F /* Info.plist */,
+				141088AB1BD56C3000D41A3F /* User.storyboard */,
+				141088A91BD56C2400D41A3F /* Create.storyboard */,
 				141088921BD526A800D41A3F /* Supporting Files */,
 			);
 			path = Camera;
@@ -75,6 +80,7 @@
 				141088A01BD526A900D41A3F /* LaunchScreen.storyboard */,
 				1410889E1BD526A900D41A3F /* Assets.xcassets */,
 				141088931BD526A800D41A3F /* main.m */,
+				141088A31BD526A900D41A3F /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				141088AA1BD56C2400D41A3F /* Create.storyboard in Resources */,
+				141088AC1BD56C3000D41A3F /* User.storyboard in Resources */,
 				141088A21BD526A900D41A3F /* LaunchScreen.storyboard in Resources */,
 				1410889F1BD526A900D41A3F /* Assets.xcassets in Resources */,
 				1410889D1BD526A800D41A3F /* Main.storyboard in Resources */,
