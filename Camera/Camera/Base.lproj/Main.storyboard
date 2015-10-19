@@ -1,45 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SBA-Rv-XmC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Selfies-->
+        <scene sceneID="lI7-Dq-TcZ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="9pn-iU-JzL" customClass="SelfieFeedTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="383" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lci-vX-nSC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="icZ-sc-HvY">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <animations/>
-                            </imageView>
-                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="icZ-sc-HvY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HSP-U8-xre"/>
-                            <constraint firstItem="icZ-sc-HvY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="XS8-bw-ary"/>
-                            <constraint firstItem="icZ-sc-HvY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YSO-Wd-x9x"/>
-                            <constraint firstItem="icZ-sc-HvY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="hNr-AQ-V7M"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="icZ-sc-HvY" secondAttribute="bottom" id="jiP-vP-IRU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="icZ-sc-HvY" secondAttribute="trailing" constant="-20" id="yya-BO-AAc"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="mySelfieImageView" destination="icZ-sc-HvY" id="15Z-4B-DNh"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="383" id="rbn-3f-5fZ" customClass="SelfieTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="383"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rbn-3f-5fZ" id="OYS-QM-t0S">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="382.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <segue destination="fRb-I7-tJo" kind="show" id="Add-vM-9ai"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9pn-iU-JzL" id="rGp-Gb-wbD"/>
+                            <outlet property="delegate" destination="9pn-iU-JzL" id="BnX-Is-Loq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Selfies" id="4ta-yr-xx3"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cc2-4z-tea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="315"/>
+            <point key="canvasLocation" x="720" y="266"/>
+        </scene>
+        <!--Selfie Detail View Controller-->
+        <scene sceneID="3De-H2-2Ep">
+            <objects>
+                <viewController id="fRb-I7-tJo" customClass="SelfieDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WRj-d3-mVY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bax-h2-IKy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qws-cA-uMz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6P9-m2-i65" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1443" y="266"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FH7-qf-91O">
+            <objects>
+                <navigationController id="SBA-Rv-XmC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="myR-Eb-nWu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9pn-iU-JzL" kind="relationship" relationship="rootViewController" id="ggC-Sa-zHw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUT-UQ-amp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="266"/>
         </scene>
     </scenes>
 </document>
