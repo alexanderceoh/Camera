@@ -10,6 +10,9 @@
 
 @interface ChoiceViewController ()
 
+
+- (IBAction)choiceFbConnect:(id)sender;
+
 @end
 
 @implementation ChoiceViewController
@@ -34,4 +37,12 @@
 }
 */
 
+- (IBAction)choiceLogin:(id)sender {
+}
+
+- (IBAction)choiceRegister:(id)sender {
+}
+
+- (IBAction)choiceFbConnect:(id)sender {
+}
 @end

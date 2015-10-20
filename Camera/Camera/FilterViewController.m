@@ -10,6 +10,12 @@
 
 @interface FilterViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *filterCollectionView;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *filterCollectionViewCell;
+
 @end
 
 @implementation FilterViewController

@@ -10,6 +10,10 @@
 
 @interface SubmitViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *submitImageView;
+
+- (IBAction)submitImageViewButton:(id)sender;
+
 @end
 
 @implementation SubmitViewController
@@ -34,4 +38,6 @@
 }
 */
 
+- (IBAction)submitImageViewButton:(id)sender {
+}
 @end

@@ -20,22 +20,19 @@
                                 <rect key="frame" x="230" y="521" width="140" height="59"/>
                                 <animations/>
                                 <state key="normal" title="Facebook Connect"/>
+                                <connections>
+                                    <action selector="choiceFbConnect:" destination="AL3-k4-p4I" eventType="touchUpInside" id="a8N-B9-cG4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TW-Ok-RO9">
                                 <rect key="frame" x="230" y="352" width="140" height="59"/>
                                 <animations/>
                                 <state key="normal" title="Login"/>
-                                <connections>
-                                    <segue destination="67I-3s-0n3" kind="show" id="OUI-cM-5k1"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diY-G7-vKF">
                                 <rect key="frame" x="230" y="439" width="140" height="59"/>
                                 <animations/>
                                 <state key="normal" title="Register"/>
-                                <connections>
-                                    <segue destination="Gxr-M5-uEz" kind="show" id="Eo9-7i-Y3y"/>
-                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -81,14 +78,16 @@
                                 <rect key="frame" x="13" y="294" width="110" height="63"/>
                                 <animations/>
                                 <state key="normal" title="Next"/>
-                                <connections>
-                                    <segue destination="12S-tB-w4Y" kind="show" id="Nfg-8U-TQ7"/>
-                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="3f1-pT-JZJ" id="7SU-NI-4Gt"/>
+                        <outlet property="passwordTextField" destination="BHp-9B-McM" id="0Lm-Vl-O8c"/>
+                        <outlet property="usernameTextField" destination="PLO-ca-Yxq" id="Ped-Z1-r4b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Fz-kU-mRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

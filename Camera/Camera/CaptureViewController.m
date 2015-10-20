@@ -10,6 +10,10 @@
 
 @interface CaptureViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *cameraView;
+
+- (IBAction)takePictureButton:(id)sender;
+
 @end
 
 @implementation CaptureViewController
@@ -34,4 +38,6 @@
 }
 */
 
+- (IBAction)takePictureButton:(id)sender {
+}
 @end

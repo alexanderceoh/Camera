@@ -10,6 +10,13 @@
 
 @interface RegisterViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+
+
 @end
 
 @implementation RegisterViewController
@@ -34,4 +41,6 @@
 }
 */
 
+- (IBAction)nextButton:(id)sender {
+}
 @end

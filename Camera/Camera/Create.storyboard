@@ -25,12 +25,18 @@
                                 <rect key="frame" x="20" y="466" width="144" height="93"/>
                                 <animations/>
                                 <state key="normal" title="Take Picture"/>
+                                <connections>
+                                    <action selector="takePictureButton:" destination="atS-J9-VRh" eventType="touchUpInside" id="7W6-Se-BKp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q2n-3b-cAa"/>
+                    <connections>
+                        <outlet property="cameraView" destination="djP-Zd-6bY" id="xu5-m7-nUG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGi-Y0-8rs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,6 +85,11 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="filterCollectionView" destination="OzA-TK-pyF" id="tj5-IT-luZ"/>
+                        <outlet property="filterCollectionViewCell" destination="OzA-TK-pyF" id="Tgb-JL-RHV"/>
+                        <outlet property="imageView" destination="YJe-bv-c1d" id="Hb1-DT-9nw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnW-9H-9R9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,11 +122,17 @@
                                 <rect key="frame" x="55" y="528" width="508" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitImageViewButton:" destination="Kp1-qa-pCi" eventType="touchUpInside" id="TSo-PY-07j"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="submitImageView" destination="zmJ-TC-Ddp" id="NOP-Cf-9nX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9r-Ol-7fb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

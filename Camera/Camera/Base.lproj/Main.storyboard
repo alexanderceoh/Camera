@@ -34,6 +34,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Selfies" id="4ta-yr-xx3"/>
+                    <connections>
+                        <outlet property="mySelfieTableViewCell" destination="rbn-3f-5fZ" id="vfP-72-dv8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cc2-4z-tea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
