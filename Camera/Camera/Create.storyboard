@@ -16,21 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="djP-Zd-6bY">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djP-Zd-6bY">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb5-5t-8Mv">
-                                <rect key="frame" x="20" y="466" width="144" height="93"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb5-5t-8Mv">
+                                <rect key="frame" x="480" y="480" width="100" height="100"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="C2C-Y1-MNI"/>
+                                    <constraint firstAttribute="height" constant="100" id="qTk-G1-E8s"/>
+                                </constraints>
                                 <state key="normal" title="Take Picture"/>
+                                <connections>
+                                    <action selector="takePicture:" destination="atS-J9-VRh" eventType="touchUpInside" id="3jf-3X-dso"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="djP-Zd-6bY" secondAttribute="trailing" id="2pt-8I-Tbm"/>
+                            <constraint firstItem="djP-Zd-6bY" firstAttribute="leading" secondItem="zop-pn-cP8" secondAttribute="leading" id="MVH-wW-bam"/>
+                            <constraint firstItem="djP-Zd-6bY" firstAttribute="top" secondItem="ZzP-z5-sZR" secondAttribute="bottom" id="Nut-ir-5Jw"/>
+                            <constraint firstItem="kOv-bV-lxy" firstAttribute="top" secondItem="Kb5-5t-8Mv" secondAttribute="bottom" constant="20" id="etV-Us-dP1"/>
+                            <constraint firstItem="kOv-bV-lxy" firstAttribute="top" secondItem="djP-Zd-6bY" secondAttribute="bottom" id="f7Z-NQ-B6y"/>
+                            <constraint firstAttribute="trailing" secondItem="Kb5-5t-8Mv" secondAttribute="trailing" constant="20" id="qq2-Tz-38z"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Q2n-3b-cAa"/>
+                    <connections>
+                        <outlet property="cameraHolderView" destination="djP-Zd-6bY" id="7m2-ln-IJu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGi-Y0-8rs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,37 +66,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YJe-bv-c1d">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="500"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YJe-bv-c1d">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="450"/>
                                 <animations/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OzA-TK-pyF">
-                                <rect key="frame" x="0.0" y="498" width="600" height="102"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OzA-TK-pyF">
+                                <rect key="frame" x="0.0" y="450" width="600" height="100"/>
                                 <animations/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nm9-dR-F5f">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="i3E-yW-Ptp"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nm9-dR-F5f">
+                                    <size key="itemSize" width="80" height="80"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HIg-m2-Ue2" customClass="FilterCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterCell" id="HIg-m2-Ue2" customClass="FilterCollectionViewCell">
+                                        <rect key="frame" x="10" y="10" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NYF-30-8Km">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <animations/>
+                                        <connections>
+                                            <outlet property="filterImageView" destination="NYF-30-8Km" id="aQ3-Xb-FvD"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lo-yr-8zU">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0051201704340000003" green="0.47061340829999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="a4i-8B-0Lz"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Lo-yr-8zU" firstAttribute="top" secondItem="OzA-TK-pyF" secondAttribute="bottom" id="CPO-jk-38g"/>
+                            <constraint firstItem="OzA-TK-pyF" firstAttribute="leading" secondItem="y7m-XP-MuY" secondAttribute="leading" id="Cin-bq-23b"/>
+                            <constraint firstItem="1gh-at-eO4" firstAttribute="top" secondItem="5Lo-yr-8zU" secondAttribute="bottom" id="VRR-O9-Yda"/>
+                            <constraint firstAttribute="trailing" secondItem="YJe-bv-c1d" secondAttribute="trailing" id="WhZ-a0-on2"/>
+                            <constraint firstAttribute="trailing" secondItem="OzA-TK-pyF" secondAttribute="trailing" id="XWX-YW-4Ce"/>
+                            <constraint firstAttribute="trailing" secondItem="5Lo-yr-8zU" secondAttribute="trailing" constant="35" id="az8-oa-U9x"/>
+                            <constraint firstItem="YJe-bv-c1d" firstAttribute="top" secondItem="y7m-XP-MuY" secondAttribute="top" id="bwb-Fc-phw"/>
+                            <constraint firstItem="YJe-bv-c1d" firstAttribute="leading" secondItem="y7m-XP-MuY" secondAttribute="leading" id="duQ-Dx-gHm"/>
+                            <constraint firstItem="OzA-TK-pyF" firstAttribute="top" secondItem="YJe-bv-c1d" secondAttribute="bottom" id="kny-DM-Wyk"/>
+                            <constraint firstAttribute="trailing" secondItem="5Lo-yr-8zU" secondAttribute="trailing" id="vFr-21-bhL"/>
+                            <constraint firstItem="5Lo-yr-8zU" firstAttribute="leading" secondItem="y7m-XP-MuY" secondAttribute="leading" id="yxz-sU-Xp4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="az8-oa-U9x"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="filterCollectionView" destination="OzA-TK-pyF" id="rgH-8N-SSU"/>
+                        <outlet property="filterImageView" destination="YJe-bv-c1d" id="pnY-FX-7x6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnW-9H-9R9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,11 +174,17 @@
                                 <rect key="frame" x="55" y="528" width="508" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitSelfie:" destination="Kp1-qa-pCi" eventType="touchUpInside" id="cnp-Ew-2eG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="captionTextView" destination="Bod-vM-PyU" id="qiU-pb-IXs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9r-Ol-7fb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

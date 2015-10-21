@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "imageEditing.h"
+
 @interface FilterViewController : UIViewController
+
+@property UIImage * originalImage;
+
+
 
 @end
